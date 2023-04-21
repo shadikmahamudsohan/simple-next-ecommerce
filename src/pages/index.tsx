@@ -14,7 +14,7 @@ export default function Home() {
     <main className='bg-gray-100 min-h-screen p-5'>
       {user ? <>
         <div className='flex justify-between items-center'>
-          <div className="w-10 h-10 flex items-center justify-center rounded-full bg-blue-500 text-white">
+          <div className="w-10 h-10 flex items-center justify-center rounded-full bg-blue-500 text-white" onClick={() => router.push('/signin')}>
             {user.email && user.email.charAt(0).toUpperCase()}
           </div>
           <button onClick={() => signOut(auth)} className='px-5 py-2 bg-red-600 rounded-lg text-white hover:bg-red-700 transition-all'>Log Out</button>
